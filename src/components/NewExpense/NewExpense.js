@@ -2,6 +2,6 @@ import React from 'react'
 
 export const NewExpense = () => {
   return (
-    <div><form></form></div>
+    <div className='new-expense'><form></form></div>
   )
 }
