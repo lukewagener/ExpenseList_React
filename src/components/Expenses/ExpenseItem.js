@@ -3,6 +3,7 @@ import "./ExpenseItem.css";
 import ExpenseDate from "./ExpenseDate";
 import Card from "../UI/Card";
 
+// Expense item layout
 export default function ExpenseItem(props) {
   const [title, setTitle] = useState(props.title);
 

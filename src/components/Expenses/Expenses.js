@@ -2,6 +2,7 @@ import "./Expenses.css";
 import ExpenseItem from "./ExpenseItem";
 import Card from "../UI/Card";
 
+// List of Expense Items
 export default function Expenses(props) {
   return (
     <Card className="expenses">
