@@ -1,6 +1,7 @@
 import Expenses from "./components/Expenses/Expenses.js";
 import { NewExpense } from "./components/NewExpense/NewExpense.js";
 
+// Root App
 export default function App() {
   const expenses = [
     {
@@ -22,10 +23,15 @@ export default function App() {
       amount: 450,
       date: new Date(2021, 5, 12),
     },
-  ];
+  ]; 
+
+  const addExpenseHandler = expense => {
+    console.log('In App.js');
+    console.log(expense);
+  }
   return (
     <div>
-      <NewExpense />
+      <NewExpense onAddExpense={addExpenseHandler}/>
       <Expenses items={expenses} />
     </div>
   );
