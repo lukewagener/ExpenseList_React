@@ -1,8 +1,11 @@
 import Expenses from "./components/Expenses/Expenses.js";
 import { NewExpense } from "./components/NewExpense/NewExpense.js";
+import "./components/Expenses/ExpensesFilter.css";
+import { useState } from "react";
 
 // Root App
 export default function App() {
+  const [filteredYear, setFilteredYear] = useState();
   const expenses = [
     {
       id: "e1",
@@ -23,15 +26,15 @@ export default function App() {
       amount: 450,
       date: new Date(2021, 5, 12),
     },
-  ]; 
+  ];
 
-  const addExpenseHandler = expense => {
-    console.log('In App.js');
+  const addExpenseHandler = (expense) => {
+    console.log("In App.js");
     console.log(expense);
-  }
+  };
   return (
     <div>
-      <NewExpense onAddExpense={addExpenseHandler}/>
+      <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses items={expenses} />
     </div>
   );

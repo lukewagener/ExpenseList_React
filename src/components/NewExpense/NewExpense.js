@@ -11,12 +11,15 @@ export const NewExpense = (props) => {
       ...enteredExpenseData,
       id: Math.random().toString(),
     };
-    props.onAddExpense(expenseData)
+    // Passing data upwards to parent 'App.js' via App.js props
+    props.onAddExpense(expenseData);
   };
   return (
     <div className="new-expense">
       {/* passUpData represents props to be passed upward to parent component, in this case, the expense data submitted through the form. */}
-      <ExpenseForm onSaveExpenseData={saveExpenseHandler} />
+      <ExpenseForm
+        onSaveExpenseData={saveExpenseHandler}
+      />
     </div>
   );
 };
