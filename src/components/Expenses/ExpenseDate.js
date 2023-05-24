@@ -1,9 +1,10 @@
-import './ExpenseDate.css'
+import React from 'react';
 
-// Date container section of Expense Item.
-export default function ExpenseDate(props) {
-  const month = props.date.toLocaleString("en-US", { month: "long" });
-  const day = props.date.toLocaleString("en-US", { day: "2-digit" });
+import './ExpenseDate.css';
+
+const ExpenseDate = (props) => {
+  const month = props.date.toLocaleString('en-US', { month: 'long' });
+  const day = props.date.toLocaleString('en-US', { day: '2-digit' });
   const year = props.date.getFullYear();
 
   return (
@@ -13,4 +14,6 @@ export default function ExpenseDate(props) {
       <div className='expense-date__day'>{day}</div>
     </div>
   );
-}
+};
+
+export default ExpenseDate;
